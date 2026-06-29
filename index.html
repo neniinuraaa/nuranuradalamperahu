@@ -1,181 +1,120 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jangan Kaget 😹</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#ffd6e7,#fff0f5);
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-overflow:hidden;
-}
-
-.card{
-background:white;
-width:90%;
-max-width:420px;
-padding:30px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.2);
-z-index:2;
-}
-
-button{
-padding:12px 24px;
-font-size:16px;
-border:none;
-border-radius:30px;
-background:#ff4f87;
-color:white;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.08);
-}
-
-#surat{
-display:none;
-animation:muncul 1s;
-}
-
-@keyframes muncul{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-.hati{
-position:fixed;
-top:-20px;
-animation:turun linear infinite;
-}
-
-@keyframes turun{
-to{
-transform:translateY(110vh);
-}
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Buat Kamu 💌</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        *{ margin:0; padding:0; box-sizing:border-box; }
+        body{ font-family:'Quicksand',sans-serif; background:linear-gradient(135deg,#ffd6e7,#ffeef6,#fff7fb); display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px; overflow:hidden; }
+        .card{ width:100%; max-width:420px; background:rgba(255,255,255,.75); backdrop-filter:blur(12px); border-radius:30px; padding:35px; box-shadow:0 10px 30px rgba(255,105,180,.25); text-align:center; }
+        h1,h2{ font-family:'Fredoka',cursive; color:#ff4f87; margin-bottom:15px; }
+        p{ font-size:18px; line-height:1.7; color:#555; margin-bottom:20px; }
+        button{ width:100%; padding:15px; margin-top:12px; border:none; border-radius:40px; background:#ff6fa4; color:white; font-size:17px; font-family:'Fredoka'; cursor:pointer; transition:.25s; }
+        button:hover{ transform:scale(1.05); }
+        .page{ display:none; }
+        .page.active{ display:block; }
+        .progress{ font-size:14px; margin-bottom:20px; color:#ff6fa4; font-weight:bold; }
+        .heart{ position:fixed; top:-50px; animation:fall linear infinite; pointer-events:none; }
+        @keyframes fall{ to{ transform:translateY(110vh); } }
+    </style>
 </head>
-
 <body>
 
 <div class="card">
+    <div class="progress" id="progress">Halaman 1 / 3 🌸</div>
 
-<div id="awal">
-<h2>📩 Ada Surat Nih...</h2>
-<p>Klik kalau berani 😹</p>
+    <div id="page1" class="page active">
+        <h1>💌 Haiii...</h1>
+        <p>Aku cuma mau memastikan sesuatu dulu...</p>
+        <button onclick="lukman()">🩷 Iya, aku Lukman</button>
+        <button onclick="bukan()">🤍 Bukan</button>
+    </div>
 
-<button onclick="buka()">Buka Amplop 💌</button>
-</div>
+    <div id="pageBukan" class="page">
+        <h2>🥹 Yahhh...</h2>
+        <p>Berarti bukan buat kamu. Makasih ya udah mampir.</p>
+        <button onclick="kembali()">⬅️ Kembali</button>
+    </div>
 
-<div id="surat">
+    <div id="page2" class="page">
+        <h1>Yeyy!! 😆</h1>
+        <p>Berarti orangnya bener. Tapi janji ya, bacanya sampai habis.</p>
+        <button onclick="lanjut()">🤝 Janji</button>
+        <button id="kabur">😒 Enggak</button>
+    </div>
 
-<h2>HALOOOOOOO!!!😂😂😂</h2>
+    <div id="page3" class="page">
+        <h1>💌</h1>
+        <p>Silakan buka amplopnya.</p>
+        <button onclick="nextPage(4)">💌 Buka Amplop</button>
+    </div>
 
-<p>
-ANJAYYYY!!! 😹<br><br>
-Aku lagi iseng bikin beginian.
-Dulu sempat belajar coding di lab sama Pak Sufyan dan Pak Bambang, tapi habis itu lupa lagi. Jadi sekarang lagi nyoba-nyoba lagi. 🤭
-</p>
+    <div id="page4" class="page">
+        <h1>HALOOOOOO!!! 😂</h1>
+        <p>Aku lagi iseng bikin beginian. Seru juga ya belajar coding lagi!</p>
+        <button onclick="nextPage(5)">Lanjut ➜</button>
+    </div>
 
-<p>
-Pertama-tama...
-Makasiii banyak yaaa udah selalu mau dengerin aku cerita.
-</p>
-
-<p>
-Jujur aja,
-aku lebih tertarik duduk di kursi rumah sambil ngobrol sama kamu daripada melakukan hal lain.
-</p>
-
-<p>
-TAPI...
-</p>
-
-<h2>GUE. KESEL. SAMA. LO. 😾</h2>
-
-<p>
-Karena kadang sifat kamu lebih mirip...
-</p>
-
-<h1>FIRAUN MESIR. 👑</h1>
-
-<p>😭😭😭</p>
-
-<p>.....................................</p>
-
-<p>Eh bentar deh...</p>
-
-<h2>KEREN YA BTW??? 🤭🤭</h2>
-
-<p>
-Sebenernya aku cuma mau pamer kalau aku lagi belajar ini.
-</p>
-
-<p>
-Terus...
-kalau misalnya 2 atau 3 tahun lagi aku nikah...
-</p>
-
-<p>
-Dateng ya.
-</p>
-
-<p>
-Amplopnya aku request <b>Rp500.000</b> aja.
-Kalau keberatan...
-ya Rp1jt ga ada apa² nya kali ya 😁
-</p>
-
-<p>
-Sama jangan lupa...
-bedcover warna pinkkkkk. 🌸
-</p>
-
-<h2>Udah ah segitu aja. 😂</h2>
-
-<p>Sekarang tos dulu sini!! 👊</p>
-
-<button onclick="tos()">👊 Tos!</button>
-
-<p id="hasil"></p>
-
-</div>
-
+    <div id="page5" class="page">
+        <p>Makasiii banyak yaaa udah selalu mau dengerin aku cerita. 🩷</p>
+    </div>
 </div>
 
 <script>
+    const progress = document.getElementById("progress");
 
-function buka(){
-document.getElementById("awal").style.display="none";
-document.getElementById("surat").style.display="block";
-}
+    function sembunyiSemua() {
+        document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    }
 
-function tos(){
-document.getElementById("hasil").innerHTML="🤜💥🤛 SIP!! Makasih udah baca sampai habis! 😂❤️";
-}
+    function nextPage(n) {
+        sembunyiSemua();
+        document.getElementById("page" + n).classList.add("active");
+    }
 
-for(let i=0;i<25;i++){
-let h=document.createElement("div");
-h.className="hati";
-h.innerHTML="💖";
-h.style.left=Math.random()*100+"vw";
-h.style.animationDuration=(3+Math.random()*5)+"s";
-h.style.fontSize=(15+Math.random()*20)+"px";
-document.body.appendChild(h);
-}
+    function lukman() {
+        sembunyiSemua();
+        document.getElementById("page2").classList.add("active");
+        progress.innerHTML = "Halaman 2 / 3 🌸";
+    }
 
+    function bukan() {
+        sembunyiSemua();
+        document.getElementById("pageBukan").classList.add("active");
+        progress.innerHTML = "Ups...";
+    }
+
+    function kembali() {
+        sembunyiSemua();
+        document.getElementById("page1").classList.add("active");
+        progress.innerHTML = "Halaman 1 / 3 🌸";
+    }
+
+    function lanjut() {
+        sembunyiSemua();
+        document.getElementById("page3").classList.add("active");
+        progress.innerHTML = "Halaman 3 / 3 🌸";
+
+        // Efek hujan hati
+        for(let i=0; i<25; i++){
+            let h = document.createElement("div");
+            h.className = "heart";
+            h.innerHTML = "💖";
+            h.style.left = Math.random() * 100 + "vw";
+            h.style.animationDuration = (5 + Math.random() * 6) + "s";
+            h.style.animationDelay = Math.random() * 5 + "s";
+            document.body.appendChild(h);
+        }
+    }
+
+    const kabur = document.getElementById("kabur");
+    kabur.addEventListener("mouseover", () => {
+        kabur.style.position = "absolute";
+        kabur.style.left = Math.random() * 80 + "%";
+        kabur.style.top = Math.random() * 80 + "%";
+    });
 </script>
 
 </body>
