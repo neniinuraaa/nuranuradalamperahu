@@ -1,3 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jangan Kaget 😹</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffd6e7,#fff0f5);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.card{
+background:white;
+width:90%;
+max-width:420px;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+z-index:2;
+}
+
+button{
+padding:12px 24px;
+font-size:16px;
+border:none;
+border-radius:30px;
+background:#ff4f87;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+#surat{
+display:none;
+animation:muncul 1s;
+}
+
+@keyframes muncul{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.hati{
+position:fixed;
+top:-20px;
+animation:turun linear infinite;
+}
+
+@keyframes turun{
+to{
+transform:translateY(110vh);
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div id="awal">
+<h2>📩 Ada Surat Nih...</h2>
+<p>Klik kalau berani 😹</p>
+
+<button onclick="buka()">Buka Amplop 💌</button>
+</div>
+
 <div id="surat">
 
 <h2>HALOOOOOOO!!!😂😂😂</h2>
@@ -30,17 +111,11 @@ Karena kadang sifat kamu lebih mirip...
 
 <h1>FIRAUN MESIR. 👑</h1>
 
-<p>
-😭😭😭
-</p>
+<p>😭😭😭</p>
 
-<p>
-.....................................
-</p>
+<p>.....................................</p>
 
-<p>
-Eh bentar deh...
-</p>
+<p>Eh bentar deh...</p>
 
 <h2>KEREN YA BTW??? 🤭🤭</h2>
 
@@ -54,13 +129,13 @@ kalau misalnya 2 atau 3 tahun lagi aku nikah...
 </p>
 
 <p>
-Dateng ya. 
+Dateng ya.
 </p>
 
 <p>
 Amplopnya aku request <b>Rp500.000</b> aja.
 Kalau keberatan...
-ya Rp1jt ga ada apa² nya kali ya😃
+ya Rp1jt ga ada apa² nya kali ya 😁
 </p>
 
 <p>
@@ -70,11 +145,38 @@ bedcover warna pinkkkkk. 🌸
 
 <h2>Udah ah segitu aja. 😂</h2>
 
-<p>
-Sekarang tos dulu sini!! 👊</p>
+<p>Sekarang tos dulu sini!! 👊</p>
 
 <button onclick="tos()">👊 Tos!</button>
 
 <p id="hasil"></p>
 
 </div>
+
+</div>
+
+<script>
+
+function buka(){
+document.getElementById("awal").style.display="none";
+document.getElementById("surat").style.display="block";
+}
+
+function tos(){
+document.getElementById("hasil").innerHTML="🤜💥🤛 SIP!! Makasih udah baca sampai habis! 😂❤️";
+}
+
+for(let i=0;i<25;i++){
+let h=document.createElement("div");
+h.className="hati";
+h.innerHTML="💖";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(3+Math.random()*5)+"s";
+h.style.fontSize=(15+Math.random()*20)+"px";
+document.body.appendChild(h);
+}
+
+</script>
+
+</body>
+</html>
