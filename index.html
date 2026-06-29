@@ -46,16 +46,17 @@
         let html = "";
         switch(n) {
             case 0: html = "<h1>Verifikasi</h1><p>Kamu Lukman kan? 🤭</p><button onclick='updatePage(1)'>HEEH UING</button><button class='kabur' onmouseover='gerak(this)'>bukannn</button>"; break;
-            case 1: html = "<h1>📩 Oke...</h1><p>Janji ya, baca sampai selesai? Pusing tau bikinnya! 😭😭</p><button onclick='updatePage(2)'>Janji! 🤝</button><button class='kabur' onmouseover='gerak(this)'>Males ah</button>"; break;
+            case 'bukan': html = "<p>Yahhh... berarti ini bukan buat kamu. 🌸</p><button onclick='location.reload()'>Keluar</button>"; break;
+            case 1: html = "<h1>📩 Oke...</h1><p>Berarti ini emang buat kamu. Janji ya, baca sampai selesai? Pusing tau bikinnya! 😭😭</p><button onclick='updatePage(2)'>Janji! 🤝</button><button class='kabur' onmouseover='gerak(this)'>Males ah</button>"; break;
             case 2: html = "<h1>😃🤟</h1><p>Makasiii ya udah selalu dengerin aku cerita.</p><button onclick='updatePage(3)'>sama-samaaa😃🤟</button><button class='kabur' onmouseover='gerak(this)'>ga mau denger sbnrnya</button>"; break;
             case 3: html = "<p>Aku lebih seneng duduk di rumah ngobrol sama kamu.</p><button onclick='updatePage(4)'>Terus?</button><button class='kabur' onmouseover='gerak(this)'>b azaaa</button>"; break;
             case 4: card.style.background = "rgba(0,0,0,0.7)"; card.style.color = "white"; html = "<h1>TAPI...</h1><button onclick='updatePage(5)'>Apa? 😨</button><button class='kabur' onmouseover='gerak(this)'>gapeduli🤪</button>"; break;
             case 5: card.style.background = "rgba(255,255,255,0.7)"; card.style.color = "#555"; html = "<h1>GUE. KESEL. SAMA. LO. 😾</h1><button onclick='updatePage(6)'>aku kan baik😁</button><button onclick='updatePage(6)'>bodoamat😊😊</button>"; break;
             case 6: html = "<h1 class='shake'>KARENA KAMU MIRIP FIRAUN MESIR 👑</h1><p>😂😂😂</p><button onclick='updatePage(7)'>EMANGGGG🤪</button><button class='kabur' onmouseover='gerak(this)'>IDIHHHHH</button>"; break;
-            case 7: html = "<h1>Eh bentar...</h1><p>tapi btw eren ya btw codingannya? 🤭</p><button onclick='updatePage(8)'>mayan lahhh</button><button class='kabur' onmouseover='gerak(this)'>jelekkk😜</button>"; break;
-            case 8: html = "<p>aku pamer doang lagi belajar coding. dulu diajar di lab sm paham banget sm pasufyan😭</p><button onclick='updatePage(9)'>y</button><button class='kabur' onmouseover='gerak(this)'>apakah aku terlihat peduli?</button>"; break;
+            case 7: html = "<h1>Eh bentar...</h1><p>tapi btw keren ya btw codingannya? 🤭</p><button onclick='updatePage(8)'>mayan lahhh</button><button class='kabur' onmouseover='gerak(this)'>jelekkk😜</button>"; break;
+            case 8: html = "<p>aku pamer doang lagi belajar coding. dulu diajar di lab sm pabambang banget sm pasufyan😭</p><button onclick='updatePage(9)'>y</button><button class='kabur' onmouseover='gerak(this)'>apakah aku terlihat peduli?</button>"; break;
             case 9: html = "<p>kalo 2 atau 3 tahun lagi aku nikah...</p><button onclick='updatePage(10)'>apehhh?</button><button class='kabur' onmouseover='gerak(this)'>gak tertarik</button>"; break;
-            case 10: html = "<p>dateng yee plis. amplopnya500.000 aja.</p><button onclick='updatePage(11)'>deal 🤝</button><button class='kabur' onmouseover='gerak(this)'>gadulu mahal!😭</button>"; break;
+            case 10: html = "<p>dateng yee plis. amplopnya 500.000 aja.</p><button onclick='updatePage(11)'>deal 🤝</button><button class='kabur' onmouseover='gerak(this)'>gadulu mahal!😭</button>"; break;
             case 11: html = "<p>Kalau keberatan... 1 juta juga gapapa sih. 😇😇</p><button onclick='updatePage(12)'>yaelah</button><button class='kabur' onmouseover='gerak(this)'>gaduluuu</button>"; break;
             case 12: html = "<h1>eits, tunggu!</h1><p>kamu sbnrnya tau nama aku gasih? 😭</p><button onclick='updatePage(\"salah\")'>Neni Nura</button><button onclick='updatePage(\"benar\")'>Neni Nurhaiti</button><button class='kabur' onmouseover='gerak(this)'>gtau bodoamat</button>"; break;
             case 'salah': html = "<h1>PAYAH BANGET!</h1><p>Kita unfriend! 😡 Coba lagi.</p><button onclick='updatePage(12)'>Coba lagi</button><button class='kabur' onmouseover='gerak(this)'>Minta maaf</button>"; break;
