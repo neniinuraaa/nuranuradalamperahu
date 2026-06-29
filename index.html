@@ -24,6 +24,7 @@
     <div id="content">
         <h1>Haii, ada surat nih! 💌</h1>
         <button onclick="updatePage(0)">Buka</button>
+        <button onclick="window.close()">Nanti aja deh</button>
     </div>
 </div>
 
@@ -34,28 +35,29 @@
     function updatePage(n) {
         let html = "";
         switch(n) {
-            case 0: html = "<h1>Verifikasi Identitas</h1><p>Sebelum kita mulai, kamu Lukman kan? 🤭</p><button onclick='updatePage(1)'>🩷 Iya, aku Lukman</button><button onclick='updatePage(\"bukan\")'>🤍 Bukan</button>"; break;
-            case 'bukan': html = "<p>Yahh... bukan buat kamu. Makasih udah mampir! 🌸</p><button onclick='location.reload()'>Keluar</button>"; break;
-            case 1: html = "<h1>📩 Oke...</h1><p>Janji ya, baca sampai selesai? Soalnya ini bikinnya lama banget, pusing tau! 🤕</p><button onclick='updatePage(2)'>Janji! 🤝</button>"; break;
-            case 2: html = "<h1>🥹💕</h1><p>Pertama-tama... makasiii ya udah selalu dengerin aku cerita.</p><button onclick='updatePage(3)'>Lanjut</button>"; break;
-            case 3: html = "<p>Jujur aja... aku lebih seneng duduk di rumah ngobrol sama kamu.</p><button onclick='updatePage(4)'>Terus?</button>"; break;
-            case 4: card.style.background = "rgba(0,0,0,0.7)"; card.style.color = "white"; html = "<h1>TAPI...</h1><button onclick='updatePage(5)'>Apa? 😨</button>"; break;
+            case 0: html = "<h1>Verifikasi</h1><p>Kamu Lukman kan? 🤭</p><button onclick='updatePage(1)'>Iya, aku Lukman</button><button onclick='updatePage(\"bukan\")'>Bukan</button>"; break;
+            case 'bukan': html = "<p>Yahh... bukan buat kamu. 🌸</p><button onclick='location.reload()'>Keluar</button><button onclick='location.reload()'>Keluar</button>"; break;
+            case 1: html = "<h1>📩 Oke...</h1><p>Janji ya, baca sampai selesai? Pusing tau bikinnya! 🤕</p><button onclick='updatePage(2)'>Janji! 🤝</button><button onclick='updatePage(2)'>Oke deh</button>"; break;
+            case 2: html = "<h1>😹😹</h1><p>Makasiii ya udah selalu dengerin aku cerita.</p><button onclick='updatePage(3)'>Lanjut</button><button onclick='updatePage(3)'>Next</button>"; break;
+            case 3: html = "<p>Aku lebih seneng duduk di rumah ngobrol sama kamu.</p><button onclick='updatePage(4)'>Terus?</button><button onclick='updatePage(4)'>Lanjutin</button>"; break;
+            case 4: card.style.background = "rgba(0,0,0,0.7)"; card.style.color = "white"; html = "<h1>TAPI...</h1><button onclick='updatePage(5)'>Apa? 😨</button><button onclick='updatePage(5)'>Kenapa?</button>"; break;
             case 5: card.style.background = "rgba(255,255,255,0.7)"; card.style.color = "#555"; html = "<h1>GUE. KESEL. SAMA. LO. 😾</h1><button onclick='updatePage(6)'>Loh, kenapa?</button><button onclick='updatePage(6)'>Bodoamat 🙄</button>"; break;
-            case 6: html = "<h1 class='shake'>KARENA KAMU MIRIP FIRAUN MESIR 👑</h1><p>😂😂😂</p><button onclick='updatePage(7)'>WKWKWK</button>"; break;
-            case 7: html = "<h1>Eh bentar...</h1><p>Keren ya btw codingannya? 🤭</p><button onclick='updatePage(8)'>Lumayan 😌</button>"; break;
-            case 8: html = "<p>Sebenernya aku cuma mau pamer aku lagi belajar coding. 😭</p><button onclick='updatePage(9)'>Lanjut</button>"; break;
-            case 9: html = "<p>Kalau 2 atau 3 tahun lagi aku nikah...</p><button onclick='updatePage(10)'>Terus?</button>"; break;
-            case 10: html = "<p>Dateng ya. Amplopnya Rp500.000 aja.</p><button onclick='updatePage(11)'>Deal 🤝</button>"; break;
-            case 11: html = "<p>Kalau keberatan... Rp1 juta juga gapapa sih. 😌</p><button onclick='updatePage(12)'>Yaelah 😂</button>"; break;
-            case 12: html = "<h1>Eits, tunggu!</h1><p>Kamu sebenernya tau nama aku gasih? 🤨</p><button onclick='updatePage(13)'>Nura nura dalam perahu</button><button onclick='updatePage(13)'>Neni nura</button><button onclick='updatePage(13)'>Neni nurhayati</button><button onclick='updatePage(13)'>Neni nurhaiti</button><button onclick='updatePage(14)'>Gatau bodoamat</button>"; break;
-            case 14: html = "<h1 style='font-size: 50px'>😡💢👿🔥😤</h1><p>Pilih yang BENER sekarang juga!!!</p><button onclick='updatePage(12)'>Coba lagi 😤</button>"; break;
-            case 13: html = "<h1>Nah gitu dong! 🩷</h1><p>Udah ah segitu aja. Sekarang tos dulu sini!! 👊</p><button onclick='finish()'>👊 Tos!</button>"; break;
+            case 6: html = "<h1 class='shake'>KARENA KAMU MIRIP FIRAUN MESIR 👑</h1><p>😂😂😂</p><button onclick='updatePage(7)'>WKWKWK</button><button onclick='updatePage(7)'>Gak lucu 😒</button>"; break;
+            case 7: html = "<h1>Eh bentar...</h1><p>Keren ya btw codingannya? 🤟🤟🤭</p><button onclick='updatePage(8)'>Lumayan 😌</button><button onclick='updatePage(8)'>Biasa aja</button>"; break;
+            case 8: html = "<p>Aku pamer doang lagi belajar coding. 😭</p><button onclick='updatePage(9)'>Lanjut</button><button onclick='updatePage(9)'>Oke lanjut</button>"; break;
+            case 9: html = "<p>Kalau 2 atau 3 tahun lagi aku nikah...</p><button onclick='updatePage(10)'>Terus?</button><button onclick='updatePage(10)'>Wah serius?</button>"; break;
+            case 10: html = "<p>Dateng ya. Amplopnya Rp500.000 aja.</p><button onclick='updatePage(11)'>Deal 🤝</button><button onclick='updatePage(11)'>Siap!</button>"; break;
+            case 11: html = "<p>Kalau keberatan... Rp1 juta juga gapapa sih. 😌</p><button onclick='updatePage(12)'>Yaelah 😂</button><button onclick='updatePage(12)'>Hahaha</button>"; break;
+            case 12: html = "<h1>Eits, tunggu!</h1><p>Tau nama aku gasih? 🤨</p><button onclick='updatePage(\"salah\")'>Nura dalam perahu</button><button onclick='updatePage(\"salah\")'>Neni Nura</button><button onclick='updatePage(\"benar\")'>Neni Nurhaiti</button><button onclick='updatePage(\"salah\")'>Neni nurhayati</button><button onclick='updatePage(\"marah\")'>Gatau bodoamat</button><button onclick='updatePage(\"salah\")'>Nura saja</button>"; break;
+            case 'salah': html = "<h1>PAYAH BANGET!</h1><p>Kita unfriend! 😡 Coba lagi.</p><button onclick='updatePage(12)'>Coba lagi</button><button onclick='updatePage(12)'>Ulangi</button>"; break;
+            case 'marah': html = "<h1 style='font-size: 50px'>😡💢👿🔥😤</h1><p>Pilih yang BENER sekarang juga!!!</p><button onclick='updatePage(12)'>Iya ampun</button><button onclick='updatePage(12)'>Pilih lagi</button>"; break;
+            case 'benar': html = "<h1>Nah gitu dong! 🩷</h1><p>Udah ah segitu aja. Sekarang tos dulu sini!! 👊</p><button onclick='finish()'>👊 Tos!</button><button onclick='finish()'>👊 Tos</button>"; break;
         }
         content.innerHTML = html;
     }
 
     function finish() {
-        content.innerHTML = "<h1>Makasiii udah mau baca sampai habis! 🩷</h1><button onclick='window.close()'>Keluar</button>";
+        content.innerHTML = "<h1>Makasiii udah mau baca sampai habis! 🩷</h1><p>Sekarang, kita tos dulu! 👊</p><button onclick='window.close()'>Keluar</button>";
         confetti({ particleCount: 200, spread: 70, origin: { y: 0.6 } });
         for(let i=0; i<30; i++){
             let h = document.createElement("div");
