@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jasa Ucapan Birthday</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 15px;
+      width: 300px;
+      margin: 20px auto;
+    }
+
+    input, select {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      background: white;
+      color: #ff4d6d;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .contoh {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>🎀 Jasa Ucapan Ulang Tahun Digital</h1>
+  <p>Bikin ucapan aesthetic kayak Instagram Story 💖</p>
+
+  <!-- CONTOH -->
+  <div class="card">
+    <h3>Contoh Hasil</h3>
+    <p class="contoh">🎂 Happy Birthday Andi<br>
+    Semoga panjang umur & bahagia selalu 💖</p>
+  </div>
+
+  <!-- ORDER FORM -->
+  <div class="card">
+    <h3>Order Sekarang</h3>
+
+    <input id="nama" placeholder="Nama yang ulang tahun">
+    <input id="pesan" placeholder="Pesan">
+
+    <select id="style">
+      <option>Pink Aesthetic</option>
+      <option>Blue Dreamy</option>
+      <option>Dark Elegant</option>
+    </select>
+
+    <button onclick="kirimWA()">Pesan via WhatsApp</button>
+  </div>
+
+</div>
+
+<script>
+function kirimWA(){
+  let nama = document.getElementById("nama").value;
+  let pesan = document.getElementById("pesan").value;
+  let style = document.getElementById("style").value;
+
+  let nomor = "083144904569"; // ganti nomor WA kamu
+
+  let text = `Halo, saya mau pesan ucapan birthday:%0A
+Nama: ${nama}%0A
+Pesan: ${pesan}%0A
+Style: ${style}`;
+
+  window.open("https://wa.me/" + nomor + "?text=" + text, "_blank");
+}
+</script>
+
+</body>
+</html>
