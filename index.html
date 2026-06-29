@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOLLO ADA SURAT NIH💌</title>
+    <title>Surat Buat Kamu 💌</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <style>
         body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #ffd6e7, #ffeef6); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; transition: background 0.5s; }
         .card { width: 90%; max-width: 400px; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); border-radius: 30px; padding: 40px; text-align: center; box-shadow: 0 10px 30px rgba(255,105,180,0.2); transition: all 0.5s; }
         h1 { color: #ff4f87; font-size: 22px; margin-bottom: 20px; }
-        button { width: 100%; padding: 15px; border: none; border-radius: 50px; background: #ff6fa4; color: white; font-weight: 600; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+        button { width: 100%; padding: 12px; border: none; border-radius: 50px; background: #ff6fa4; color: white; font-weight: 600; cursor: pointer; transition: 0.3s; margin-top: 8px; }
         button:hover { transform: scale(1.05); background: #ff4f87; }
         .shake { animation: shake 0.5s infinite; display: inline-block; }
         @keyframes shake { 0%, 100% {transform: translateX(0);} 50% {transform: translateX(-10px);} }
@@ -22,11 +22,8 @@
 
 <div class="card" id="card">
     <div id="content">
-        <h1>💌 Haii...</h1>
-        <p>Sebelum dibuka... Aku mau memastikan sesuatu dulu. 🤭</p>
-        <p><strong>Apakah kamu Lukman?</strong></p>
-        <button onclick="updatePage(2)">🩷 Iya, aku Lukman</button>
-        <button onclick="updatePage('bukan')">🤍 Bukan</button>
+        <h1>Haii, ada surat nih! 💌</h1>
+        <button onclick="updatePage(0)">Buka</button>
     </div>
 </div>
 
@@ -36,35 +33,29 @@
 
     function updatePage(n) {
         let html = "";
-        
         switch(n) {
-            case 'bukan': 
-                html = "<p>Yahh... berarti ini bukan buat kamu. 😭<br>Tapi makasih udah mampir. Semoga harimu menyenangkan! 🌸</p><button onclick='location.reload()'>Keluar</button>"; 
-                break;
-            case 2: 
-                html = "<h1>📩 Oke...</h1><p>Berarti surat ini memang buat kamu. Siap baca sampai selesai?</p><button onclick='updatePage(3)'>Buka Amplop 💌</button>"; 
-                break;
-            case 3: html = "<h1>🥹💕</h1><p>Pertama-tama... makasiii ya udah selalu dengerin aku cerita.</p><button onclick='updatePage(4)'>Lanjut</button>"; break;
-            case 4: html = "<p>Jujur aja... aku lebih seneng duduk di kursi rumah sambil ngobrol sama kamu.</p><button onclick='updatePage(5)'>Terus?</button>"; break;
-            case 5: 
-                card.style.background = "rgba(0,0,0,0.7)"; card.style.color = "white";
-                html = "<h1>TAPI...</h1><button onclick='updatePage(6)'>Apa? 😨</button>"; break;
-            case 6: 
-                card.style.background = "rgba(255,255,255,0.7)"; card.style.color = "#555";
-                html = "<h1>GUE. KESEL. SAMA. LO. 😾</h1><button onclick='updatePage(7)'>Loh, kenapa?</button><button onclick='updatePage(7)'>Bodoamat 🙄</button>"; break;
-            case 7: html = "<h1 class='shake'>KARENA KAMU MIRIP FIRAUN MESIR 👑</h1><p>😂😂😂</p><button onclick='updatePage(8)'>WKWKWK</button>"; break;
-            case 8: html = "<h1>Eh bentar...</h1><p>Keren ya btw codingannya? 🤭</p><button onclick='updatePage(9)'>Lumayan 😌</button>"; break;
-            case 9: html = "<p>Sebenernya aku cuma mau pamer kalau aku lagi belajar coding. 😭</p><button onclick='updatePage(10)'>Lanjut</button>"; break;
-            case 10: html = "<p>Kalau 2 atau 3 tahun lagi aku nikah...</p><button onclick='updatePage(11)'>Terus?</button>"; break;
-            case 11: html = "<p>Dateng ya. Amplopnya Rp500.000 aja.</p><button onclick='updatePage(12)'>Deal 🤝</button>"; break;
-            case 12: html = "<p>Kalau keberatan... Rp1 juta juga gapapa sih. 😌</p><button onclick='updatePage(13)'>Yaelah 😂</button>"; break;
-            case 13: html = "<h1>Udah ah segitu aja.</h1><p>Sekarang tos dulu sini!! 👊</p><button onclick='finish()'>👊 Tos!</button>"; break;
+            case 0: html = "<h1>Verifikasi Identitas</h1><p>Sebelum kita mulai, kamu Lukman kan? 🤭</p><button onclick='updatePage(1)'>🩷 Iya, aku Lukman</button><button onclick='updatePage(\"bukan\")'>🤍 Bukan</button>"; break;
+            case 'bukan': html = "<p>Yahh... bukan buat kamu. Makasih udah mampir! 🌸</p><button onclick='location.reload()'>Keluar</button>"; break;
+            case 1: html = "<h1>📩 Oke...</h1><p>Janji ya, baca sampai selesai? Soalnya ini bikinnya lama banget, pusing tau! 🤕</p><button onclick='updatePage(2)'>Janji! 🤝</button>"; break;
+            case 2: html = "<h1>🥹💕</h1><p>Pertama-tama... makasiii ya udah selalu dengerin aku cerita.</p><button onclick='updatePage(3)'>Lanjut</button>"; break;
+            case 3: html = "<p>Jujur aja... aku lebih seneng duduk di rumah ngobrol sama kamu.</p><button onclick='updatePage(4)'>Terus?</button>"; break;
+            case 4: card.style.background = "rgba(0,0,0,0.7)"; card.style.color = "white"; html = "<h1>TAPI...</h1><button onclick='updatePage(5)'>Apa? 😨</button>"; break;
+            case 5: card.style.background = "rgba(255,255,255,0.7)"; card.style.color = "#555"; html = "<h1>GUE. KESEL. SAMA. LO. 😾</h1><button onclick='updatePage(6)'>Loh, kenapa?</button><button onclick='updatePage(6)'>Bodoamat 🙄</button>"; break;
+            case 6: html = "<h1 class='shake'>KARENA KAMU MIRIP FIRAUN MESIR 👑</h1><p>😂😂😂</p><button onclick='updatePage(7)'>WKWKWK</button>"; break;
+            case 7: html = "<h1>Eh bentar...</h1><p>Keren ya btw codingannya? 🤭</p><button onclick='updatePage(8)'>Lumayan 😌</button>"; break;
+            case 8: html = "<p>Sebenernya aku cuma mau pamer aku lagi belajar coding. 😭</p><button onclick='updatePage(9)'>Lanjut</button>"; break;
+            case 9: html = "<p>Kalau 2 atau 3 tahun lagi aku nikah...</p><button onclick='updatePage(10)'>Terus?</button>"; break;
+            case 10: html = "<p>Dateng ya. Amplopnya Rp500.000 aja.</p><button onclick='updatePage(11)'>Deal 🤝</button>"; break;
+            case 11: html = "<p>Kalau keberatan... Rp1 juta juga gapapa sih. 😌</p><button onclick='updatePage(12)'>Yaelah 😂</button>"; break;
+            case 12: html = "<h1>Eits, tunggu!</h1><p>Kamu sebenernya tau nama aku gasih? 🤨</p><button onclick='updatePage(13)'>Nura nura dalam perahu</button><button onclick='updatePage(13)'>Neni nura</button><button onclick='updatePage(13)'>Neni nurhayati</button><button onclick='updatePage(13)'>Neni nurhaiti</button><button onclick='updatePage(14)'>Gatau bodoamat</button>"; break;
+            case 14: html = "<h1 style='font-size: 50px'>😡💢👿🔥😤</h1><p>Pilih yang BENER sekarang juga!!!</p><button onclick='updatePage(12)'>Coba lagi 😤</button>"; break;
+            case 13: html = "<h1>Nah gitu dong! 🩷</h1><p>Udah ah segitu aja. Sekarang tos dulu sini!! 👊</p><button onclick='finish()'>👊 Tos!</button>"; break;
         }
         content.innerHTML = html;
     }
 
     function finish() {
-        content.innerHTML = "<h1>Makasiii udah mau baca sampai habis 🩷</h1>";
+        content.innerHTML = "<h1>Makasiii udah mau baca sampai habis! 🩷</h1><button onclick='window.close()'>Keluar</button>";
         confetti({ particleCount: 200, spread: 70, origin: { y: 0.6 } });
         for(let i=0; i<30; i++){
             let h = document.createElement("div");
@@ -76,6 +67,5 @@
         }
     }
 </script>
-
 </body>
 </html>
