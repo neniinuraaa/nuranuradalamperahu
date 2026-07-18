@@ -1,91 +1,108 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>bacaaa</title>
-<style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:Poppins,sans-serif; }
-    body { background:#f1f4ef; display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px; }
-    .card { width:100%; max-width:430px; background:white; padding:30px; border-radius:25px; box-shadow:0 10px 30px rgba(0,0,0,.05); text-align:center; }
-    .hidden { display:none; }
-    h1 { color:#7d967a; margin-bottom:15px; }
-    p { line-height:1.8; color:#555; margin-bottom:15px; }
-    input { width:85%; padding:12px; border-radius:12px; border:1px solid #d4dccf; margin-top:10px; }
-    button { padding:12px 25px; margin:8px; border:none; border-radius:50px; cursor:pointer; font-weight:bold; transition:.3s; }
-    .btn1 { background:#7d967a; color:white; }
-    .btn2 { background:#e8ede7; }
-    .surat { text-align:left; margin-top:20px; line-height:1.9; min-height: 200px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Lukman</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
+        body { background:#f1f4ef; display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px; }
+        .card { width:100%; max-width:430px; background:white; padding:40px; border-radius:30px; box-shadow:0 10px 30px rgba(0,0,0,0.08); text-align:center; }
+        .hidden { display:none; }
+        h1 { color:#7d967a; margin-bottom:20px; font-size: 22px; }
+        p { line-height:1.8; color:#555; margin-bottom:20px; font-size: 15px; }
+        input { width:90%; padding:12px; border-radius:12px; border:1px solid #d4dccf; margin-bottom:20px; }
+        button { padding:12px 30px; border:none; border-radius:50px; cursor:pointer; font-weight:bold; background:#7d967a; color:white; transition:.3s; margin: 5px; }
+        button:hover { background: #6a8268; }
+        .surat { text-align:left; min-height: 200px; }
+        #yt-player { display: none; }
+    </style>
 </head>
 <body>
+
+<div id="yt-player"></div>
 
 <div class="card">
     <div id="page1">
         <h1>Verifikasi Dulu</h1>
-        <p>Surat ini hanya untuk satu orang. (masukin nama depan aja)</p>
-        <input type="text" id="nama" placeholder="Masukkan nama">
+        <p>Surat ini hanya untuk satu orang. Masukkan nama panggilanmu.</p>
+        <input type="text" id="nama" placeholder="Siapa namamu?">
         <br>
-        <button class="btn1" onclick="cekNama()">Verifikasi</button>
+        <button onclick="cekNama()">Verifikasi</button>
     </div>
 
     <div id="page2" class="hidden">
-        <h1>Lukmannnnn</h1>
-        <p>aku sengaja ngoding ini hhe lgi sneng</p>
-        <button class="btn1" onclick="next(3)">Buka</button>
+        <h1>Halo, Lukman.</h1>
+        <p>Ada sesuatu yang ingin aku sampaikan sebelum kita benar-benar berjarak.</p>
+        <button onclick="mulaiMusik()">Buka Surat</button>
     </div>
 
     <div id="page3" class="hidden">
-        <h1>Bagian 1</h1>
         <div class="surat">
-            <p>lukmannnnnn,</p>
-            <p>mau elo bulak balik 97574390 kali juga gue gmslh. bkn krna apa², cmn krena kita tmn.</p>
+            <p>Alih-alih aku menyalahkanmu, aku justru terus-terusan meminta maaf. Padahal selama ini aku tahu kamu memang sejahat itu, dan aku sudah memberikan semua yang aku bisa.</p>
         </div>
-        <button class="btn1" onclick="next(4)">pncet yaaa →</button>
+        <button onclick="next(4)">Lanjut →</button>
     </div>
 
     <div id="page4" class="hidden">
-        <h1>Bagian 2</h1>
         <div class="surat">
-            <p>gaush blok²an pasea²an lgi</p>
-            <p>kagugu</p>
+            <p>Seharusnya saat kamu memutuskan untuk benar-benar jauh, aku bisa bertanya: <i>"Jadi, selama kita dekat, yang berarti buat kamu cuma hal-hal jorok yang kita lakukan?"</i></p>
         </div>
-        <button class="btn1" onclick="next(5)">pncet lagi yaaa→</button>
+        <button onclick="next(5)">Lanjut →</button>
     </div>
 
     <div id="page5" class="hidden">
-        <h1>Bagian 3</h1>
         <div class="surat">
-            <p>buka blok wa yg prtma ah</p>
-            <p style="text-align:right">— thnks dh bca.</p>
+            <p>Bagiku, hubungan ini kompleks. Aku sayang sama kamu sebagai manusia, teman yang pernah melewati hari bareng. Kenapa kamu memandang semuanya sedangkal itu?</p>
         </div>
-        <button class="btn1" onclick="kirimWA()">iyeee aku dh baca</button>
+        <button onclick="next(6)">Lanjut →</button>
+    </div>
+
+    <div id="page6" class="hidden">
+        <div class="surat">
+            <p>Aku menghormati keputusanmu. Tapi semoga keinginan untuk berubah ini bukan cuma ucapan. Berubah bukan cuma menjauhi aku, tapi menjauh dari hal buruk ke siapa pun.</p>
+            <p>Sukses terus ya, Lukman. Aku ingin melihatmu sukses. Dan kamu pun harus melihatku bahagia.</p>
+        </div>
+        <button onclick="selesai()">Selesai</button>
     </div>
 </div>
 
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
+    let player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('yt-player', {
+            height: '0',
+            width: '0',
+            videoId: 'GNQphbGu5xM', 
+            events: { 'onReady': () => {} }
+        });
+    }
+
     function cekNama(){
         let nama = document.getElementById("nama").value.toLowerCase().trim();
         if(nama == "lukman" || nama == "lukmann"){
             next(2);
         } else {
-            alert("Maaf, surat ini bukan untukmu 😊");
+            alert("Maaf, surat ini bukan untukmu.");
         }
+    }
+
+    function mulaiMusik() {
+        player.playVideo();
+        next(3);
     }
 
     function next(n){
-        // Sembunyikan semua halaman
-        for(let i=1; i<=5; i++){
+        for(let i=1; i<=6; i++){
             document.getElementById("page"+i).classList.add("hidden");
         }
-        // Tampilkan halaman tujuan
         document.getElementById("page"+n).classList.remove("hidden");
     }
 
-    function kirimWA(){
-        const nomor = "6283144904569";
-        const pesan = "iyeee aku dh baca.";
-        window.location.href = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
+    function selesai(){
+        alert("Terima kasih sudah membacanya.");
+        window.close();
     }
 </script>
 
